@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row row_flex">
+        <div class="col col_flex col-1">
+            <form action="/users/add" method="post" class="form">
+                <input type="text" name="name" placeholder="input your name">
+                <input type="email" name="email" placeholder="input your email">
+                <input type="text" name="dep" placeholder="input your department">
+                <input type="tel" name="tel_1" placeholder="input your telephone">
+                <input type="tel" name="tel_2" placeholder="input your telephone">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        <div class="col col_flex col-1">
+            {{{search}}}
+        </div>
+        <div class="col col_flex col-1">
+            {{{body}}}
+        </div>
+        </div>
+        
+    </div>
+</body>
+</html>
