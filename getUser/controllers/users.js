@@ -3,7 +3,9 @@ var express = require('express')
     , user = require('../models/user')
     , bodyParser = require('body-parser')
     , db = require('../public/libs/db')
-    , urlencodedParser = bodyParser.urlencoded({extended: false});    
+    , urlencodedParser = bodyParser.urlencoded({extended: false});
+
+//all routers handle from /users links, full path like app/users/add + req.body
 
 router.post('/add', urlencodedParser, function (req, res) {
     console.log(req.body);

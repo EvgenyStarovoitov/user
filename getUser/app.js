@@ -4,7 +4,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     url = "mongodb://localhost:27017/test",
     db = require('./public/libs/db'),
-    controllers = require('./controllers/index'), 
+    // controllers = require('./controllers/index'), 
     urlencodedParser = bodyParser.urlencoded({extended: false}); 
 
 app.engine('handlebars', handlebars.engine); 
@@ -26,7 +26,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
 
-app.use(controllers);
+app.use(require('./controllers/index'));
 
 app.use(function(req, res, next){
     res.status(404), res.render('404');

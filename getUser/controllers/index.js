@@ -1,6 +1,5 @@
 var express = require('express')
-    , router = express.Router()
-    , user = require('../models/user');
+    , router = express.Router();
 
 router.use('/users', require('../controllers/users'));
 
